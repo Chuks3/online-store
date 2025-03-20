@@ -5,7 +5,7 @@
         <p>Items in Cart: {{ store.cart.length }}</p>
       </div>
     </header>
-    
+
     <RouterView />
   </main>
 </template>
