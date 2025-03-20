@@ -17,8 +17,7 @@
                     <span>Category: {{ item.category }}</span>
                     <span>Price: ${{ item.price }}</span>
                     <button @click="removeProduct(item.id)">Remove</button>
-                </div>
-                
+                </div> 
             </div>
         </div>
     </section>
