@@ -1,25 +1,27 @@
 <template>
-    <button @click="router.push({ name: 'Catalog' })">Back to catalog</button>
-    <div v-if="!store.cart.length" style="text-align: center;">
-        <h1>Empty Cart ...</h1>
-    </div>
-
-    <div class="cart-items" v-else>
-        <div 
-            class="cart-item"
-            v-for="item in store.cart"
-            :key="item.id"
-        >
-            <div class="item-details">
-                <img :src="item.thumbnail" alt="">
-                <span>Brand: {{ item.brand }}</span>
-                <span>Category: {{ item.category }}</span>
-                <span>Price: ${{ item.price }}</span>
-                <button @click="removeProduct(item.id)">Remove</button>
-            </div>
-            
+    <section>
+        <button @click="router.push({ name: 'Catalog' })">Back to catalog</button>
+        <div v-if="!store.cart.length" style="text-align: center;">
+            <h1>Empty Cart ...</h1>
         </div>
-    </div>
+
+        <div class="cart-items" v-else>
+            <div 
+                class="cart-item"
+                v-for="item in store.cart"
+                :key="item.id"
+            >
+                <div class="item-details">
+                    <img :src="item.thumbnail" alt="">
+                    <span>Brand: {{ item.brand }}</span>
+                    <span>Category: {{ item.category }}</span>
+                    <span>Price: ${{ item.price }}</span>
+                    <button @click="removeProduct(item.id)">Remove</button>
+                </div>
+                
+            </div>
+        </div>
+    </section>
 </template>
 
 <script>

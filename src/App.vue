@@ -1,10 +1,10 @@
 <template>
-  <header>
-    <div class="cart-item" @click="router.push({ name: 'CartView' })">
-      <p>Items in Cart: {{ store.cart.length }}</p>
-    </div>
-  </header>
   <main>
+    <header>
+      <div class="cart-item" @click="router.push({ name: 'CartView' })">
+        <p>Items in Cart: {{ store.cart.length }}</p>
+      </div>
+    </header>
     <RouterView />
   </main>
 </template>

@@ -1,4 +1,5 @@
 <template>
+    <div>
     <button @click="router.push({ name: 'Catalog' })">Back to catalog</button>
     <div class="product">
         <div class="product-image">
@@ -10,6 +11,7 @@
             <h2>Price: ${{ selectedProduct.price }}</h2>
             <button @click="addToCart">Add To Cart</button>
         </div>
+    </div>
     </div>
 </template>
 
