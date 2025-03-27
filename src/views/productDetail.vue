@@ -1,16 +1,18 @@
 <template>
-    <button @click="router.push({ name: 'Catalog' })">Back to catalog</button>
-    <div class="product">
-        <div class="product-image">
-            <img :src="selectedProduct.thumbnail" alt="">
+    <main>
+        <button @click="router.push({ name: 'Catalog' })">Back to catalog</button>
+        <div class="product">
+            <div class="product-image">
+                <img :src="selectedProduct.thumbnail" alt="">
+            </div>
+            <div class="product-details">
+                <p>Brand: {{ selectedProduct.brand }}</p>
+                <p>Description: {{ selectedProduct.description }}</p>
+                <h2>Price: ${{ selectedProduct.price }}</h2>
+                <button @click="addToCart">Add To Cart</button>
+            </div>
         </div>
-        <div class="product-details">
-            <p>Brand: {{ selectedProduct.brand }}</p>
-            <p>Description: {{ selectedProduct.description }}</p>
-            <h2>Price: ${{ selectedProduct.price }}</h2>
-            <button @click="addToCart">Add To Cart</button>
-        </div>
-    </div>
+    </main>
 </template>
 
 <script>
