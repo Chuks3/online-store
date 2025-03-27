@@ -42,7 +42,7 @@
 <style scoped>
     .products-list {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         flex-wrap: wrap;
     }
 
