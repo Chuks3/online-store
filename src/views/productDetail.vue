@@ -6,8 +6,8 @@
                 <img :src="selectedProduct.thumbnail" alt="">
             </div>
             <div class="product-details">
-                <p>Brand: {{ selectedProduct.brand }}</p>
-                <p>Description: {{ selectedProduct.description }}</p>
+                <p><b>Brand</b>: {{ selectedProduct.brand }}</p>
+                <p><b>Description:</b> {{ selectedProduct.description }}</p>
                 <h2>Price: ${{ selectedProduct.price }}</h2>
                 <button @click="addToCart">Add To Cart</button>
             </div>
@@ -46,9 +46,22 @@
 .product {
     display: flex;
     margin-top: 50px;
+    /* width: 100%; */
+    /* flex-wrap: wrap; */
 }
 
 .product-image {
     margin-right: 24px;
+}
+@media (max-width: 650px) {
+    .product {
+        flex-wrap: wrap;
+        /* align-content: center; */
+        justify-content: center;
+        text-align: center;
+    }
+    .product-details{
+        width: 300px;
+    }
 }
 </style>
