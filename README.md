@@ -27,3 +27,6 @@ npm run dev
 ```sh
 npm run build
 ```
+
+### Site hosting
+See [Hosting URL](https://chuks-store.netlify.app/).
